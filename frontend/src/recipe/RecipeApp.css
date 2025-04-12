@@ -1,0 +1,40 @@
+.recipe-app {
+    position: relative;
+    width: 100%;
+    /* min-height: 100vh; */
+    overflow-x: hidden;
+    /* background: linear-gradient(135deg, #1a1a1a, #2d2d2d); */
+}
+
+.hover-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.content-wrapper {
+    position: relative;
+    z-index: 2;
+    /* padding: 2rem; */
+}
+
+.squares-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.4;
+    transition: opacity 0.3s ease;
+}
+
+
+header, main {
+    position: relative;
+    z-index: 1; 
+    color: white;
+}

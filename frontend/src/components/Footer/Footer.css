@@ -1,0 +1,93 @@
+.footer{
+    color: var(--text-secondary);
+    background-color: var(--footer-bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 8vw;
+    padding-top: 80px;
+    margin-top: 50px;
+    border-top: 1px solid var(--border-color);
+    box-shadow: 0 -5px 20px var(--shadow-color);
+}
+
+#logo-h1{
+    font-family: "Satisfy", serif;
+    font-size: 2.2em;
+    color: var(--accent-color);
+    font-weight: bolder;
+    text-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+.footer-content{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 80px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.footer-content-left, .footer-content-right, .footer-content-center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-content-left li, .footer-content-right li, .footer-content-center li{
+    list-style: none;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    padding: 2px 0;
+}
+
+.footer-content-left li:hover, .footer-content-right li:hover, .footer-content-center li:hover{
+    color: var(--accent-color);
+    transform: translateX(5px);
+}
+
+.footer-content-left h2, .footer-content-right h2, .footer-content-center h2 {
+    color: var(--primary-color);
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 8px;
+    width: 100%;
+}
+
+.footer-social-icons img{
+    width: 40px;
+    margin-right: 15px;
+    filter: invert(0.8);
+    transition: all 0.3s ease;
+}
+
+.footer-social-icons img:hover {
+    transform: translateY(-5px);
+    filter: invert(0.8) sepia(1) saturate(5) hue-rotate(300deg);
+}
+
+.footer hr{
+    width: 100%;
+    height: 2px;
+    margin: 20px;
+    background-color: var(--border-color);
+    border: none;
+}
+
+.footer-copyright {
+    color: var(--text-secondary);
+    font-size: 0.9em;
+    opacity: 0.8;
+}
+
+@media (max-width: 750px){
+    .footer-content{
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+    }
+    .footer-copyright{
+        text-align: center;
+    }
+}

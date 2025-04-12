@@ -1,0 +1,218 @@
+.navbar {
+  padding: 1.25rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0px;
+  z-index: 100;
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(10px);
+  width: 100%;
+  box-shadow: 0 4px 15px var(--shadow-color);
+  border-radius: 0 0 16px 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.navbar.transparent {
+  background: transparent;
+  box-shadow: none;
+  border-bottom: none;
+}
+
+#logo-h1 {
+  font-family: "Satisfy", serif;
+  font-size: 2.2em;
+  color: var(--primary-color);
+  font-weight: bolder;
+  text-shadow: 0 2px 4px var(--shadow-color);
+  transition: all 0.3s ease;
+}
+
+#logo-h1:hover {
+  transform: scale(1.05);
+  color: var(--accent-color);
+}
+
+.navbar-menu{
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    color: var(--text-primary);
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.navbar-menu a {
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 5px 2px;
+}
+
+.navbar-menu a:hover {
+    color: var(--accent-color);
+}
+
+.navbar-right{
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+.navbar-right img {
+    filter: invert(1);
+    transition: all 0.3s ease;
+}
+
+.navbar-right img:hover {
+    transform: scale(1.1);
+    filter: invert(0.8) sepia(1) saturate(5) hue-rotate(235deg);
+}
+
+#sign-in{
+    background: transparent;
+    font-size: 16px;
+    color: var(--text-primary);
+    border: 2px solid var(--primary-color);
+    padding: 10px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#sign-in:hover {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  border-color: transparent;
+  color: white;
+}
+
+.navbar button:hover{
+    background-color: var(--accent-color);
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px var(--shadow-color);
+}
+
+.navbar .active{
+    padding-bottom: 2px;
+    border-bottom: 2px solid var(--accent-color);
+    color: var(--accent-color);
+}
+
+.navbar-search-icon{
+    position: relative;
+}
+
+.navbar-search-icon .dot{
+    position: absolute;
+    min-width: 10px;
+    min-height: 10px;
+    background-color: var(--accent-color);
+    border-radius: 5px;
+    top: -8px;
+    right: -8px;
+    animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.navbar-profile{
+    position: relative;
+}
+.nav-profile-dropdown{
+    position: absolute;
+    display: none;
+    right: 0;
+    z-index: 1;
+}
+
+.navbar-profile:hover .nav-profile-dropdown{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: var(--bg-secondary);
+    padding: 12px 25px;
+    border-radius: 8px;
+    border: 1px solid var(--accent-color);
+    outline: 2px solid var(--bg-primary);
+    list-style: none;
+    box-shadow: 0 5px 20px var(--shadow-color);
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.nav-profile-dropdown li{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.nav-profile-dropdown img{
+    width: 20px;
+}
+
+.nav-profile-dropdown li:hover{
+    color: var(--accent-color);
+    transform: translateX(3px);
+}
+
+@media (max-width:1050px){
+    .navbar .logo{
+        width:140px;
+    }
+    .navbar-menu{
+        gap: 20px;
+        font-size: 17px;
+    }
+    .navbar-right{
+        gap: 30px;
+    }
+    .navbar-right img{
+        width: 22px;
+    }
+    .navbar-right button{
+        padding: 8px 25px;
+    }
+}
+
+@media (max-width:900px){
+    .navbar .logo{
+        width:120px;
+    }
+    .navbar-menu{
+        gap: 15px;
+        font-size: 16px;
+    }
+    .navbar-right{
+        gap: 20px;
+    }
+    .navbar-right img{
+        width: 20px;
+    }
+    .navbar-right button{
+        padding: 7px 20px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width:750px){
+    .navbar-menu{
+        display: none;
+    }
+}
+
